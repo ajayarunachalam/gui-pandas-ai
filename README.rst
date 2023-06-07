@@ -78,6 +78,7 @@ GUIPandasAI Code Snippet
 Below is the example code snippet that runs the LLMs while viewing the uploaded data.
 
 ```python
+
 if st.session_state.df is not None:
 	st.subheader("Peek into the uploaded dataframe:")
     st.write(st.session_state.df.head(2))
