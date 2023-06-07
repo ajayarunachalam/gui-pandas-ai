@@ -8,7 +8,7 @@
 pypi: https://pypi.org/project/gui-pandas-ai
 
 
-The APP workflow is as seen below.
+The complete APP workflow is summarised as seen below.
 
 .. image:: images/main_ui.png
 
@@ -183,6 +183,10 @@ The above code will return the following:
 ```
 # Output: Olivia
 ```
+
+Collaboration
+=============
+Any contributions are most welcome! `GUIPandasAI` APP is still by large, work under progress. Please feel free to open a pull request.
 
 License
 =======
