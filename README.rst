@@ -1,5 +1,5 @@
-`GUIPandasAI`: An open-source, low-code simple python wrapper around PandasAI using the Streamlit Framework.
-============================================================================================================
+`GUIPandasAI`: An open-source, low-code python application with Generative AI capabilities using Streamlit for in-depth conversational data analysis along with key additional data functionalities using simple plain key-words
+===============================================================================================================================================================
 
 `gui-pandas-ai` is concieved, designed and developed by `Ajay Arunachalam` (ajay.arunachalam08@gmail) - https://www.linkedin.com/in/ajay-ph-d-4744581a/ 
 
@@ -79,31 +79,31 @@ Below is the example code snippet that runs the LLMs while viewing the uploaded 
 
 .. code:: python
 
-if st.session_state.df is not None:
-	st.subheader("Peek into the uploaded dataframe:")
-    st.write(st.session_state.df.head(2))
+	if st.session_state.df is not None:
+		st.subheader("Peek into the uploaded dataframe:")
+	    st.write(st.session_state.df.head(2))
 
-with st.form("Question"):
-	question = st.text_area("Question", value="", help="Enter your queries here")
-    answer = st.text_area("Answer", value="")
-    submitted = st.form_submit_button("Submit")
-    if submitted:
-		with st.spinner():
-			llm = OpenAI(api_token=st.session_state.openai_key)
-            pandas_ai = PandasAI(llm)
-            x = pandas_ai.run(st.session_state.df, prompt=question)
+	with st.form("Question"):
+		question = st.text_area("Question", value="", help="Enter your queries here")
+	    answer = st.text_area("Answer", value="")
+	    submitted = st.form_submit_button("Submit")
+	    if submitted:
+			with st.spinner():
+				llm = OpenAI(api_token=st.session_state.openai_key)
+		    pandas_ai = PandasAI(llm)
+		    x = pandas_ai.run(st.session_state.df, prompt=question)
 
-            fig = plt.gcf()
-            fig, ax = plt.subplots(figsize=(10, 6))
-            plt.tight_layout()
-            if fig.get_axes() and fig is not None:
-				st.pyplot(fig)
-                fig.savefig("plot.png")
-            st.write(x)
-            st.session_state.prompt_history.append(question)
-            response_history.append(x)  # Append the response to the list
-            st.session_state.response_history = response_history
-```      
+		    fig = plt.gcf()
+		    fig, ax = plt.subplots(figsize=(10, 6))
+		    plt.tight_layout()
+		    if fig.get_axes() and fig is not None:
+					st.pyplot(fig)
+			fig.savefig("plot.png")
+		    st.write(x)
+		    st.session_state.prompt_history.append(question)
+		    response_history.append(x)  # Append the response to the list
+		    st.session_state.response_history = response_history
+  
 
 PandasAI - Overview
 ===================
@@ -112,23 +112,23 @@ PandasAI - Overview
 For quick overview glimse through the below illustration: (All Credits & Copyrights Reserved to `Pandas AI`)
 
 .. code:: python
-import pandas as pd
-from pandasai import PandasAI
+	import pandas as pd
+	from pandasai import PandasAI
 
-# Sample DataFrame
-df = pd.DataFrame({
-    "country": ["United States", "United Kingdom", "France", "Germany", "Italy", "Spain", "Canada", "Australia", "Japan", "China"],
-    "gdp": [19294482071552, 2891615567872, 2411255037952, 3435817336832, 1745433788416, 1181205135360, 1607402389504, 1490967855104, 4380756541440, 14631844184064],
-    "happiness_index": [6.94, 7.16, 6.66, 7.07, 6.38, 6.4, 7.23, 7.22, 5.87, 5.12]
-})
+	# Sample DataFrame
+	df = pd.DataFrame({
+	    "country": ["United States", "United Kingdom", "France", "Germany", "Italy", "Spain", "Canada", "Australia", "Japan", "China"],
+	    "gdp": [19294482071552, 2891615567872, 2411255037952, 3435817336832, 1745433788416, 1181205135360, 1607402389504, 1490967855104, 4380756541440, 14631844184064],
+	    "happiness_index": [6.94, 7.16, 6.66, 7.07, 6.38, 6.4, 7.23, 7.22, 5.87, 5.12]
+	})
 
-# Instantiate a LLM
-from pandasai.llm.openai import OpenAI
-llm = OpenAI(api_token="YOUR_API_TOKEN")
+	# Instantiate a LLM
+	from pandasai.llm.openai import OpenAI
+	llm = OpenAI(api_token="YOUR_API_TOKEN")
 
-pandas_ai = PandasAI(llm, conversational=True)
-pandas_ai(df, prompt='Which are the 5 happiest countries?')
-```
+	pandas_ai = PandasAI(llm, conversational=True)
+	pandas_ai(df, prompt='Which are the 5 happiest countries?')
+
 
 The above code will return the following:
 
@@ -144,7 +144,7 @@ Name: country, dtype: object
 Of course, you can also ask PandasAI to perform more complex queries. For example, you can ask PandasAI to find the sum of the GDPs of the 2 unhappiest countries:
 
 .. code:: python
-pandas_ai(df, prompt='What is the sum of the GDPs of the 2 unhappiest countries?')
+	pandas_ai(df, prompt='What is the sum of the GDPs of the 2 unhappiest countries?')
 
 
 The above code will return the following:
@@ -154,31 +154,31 @@ The above code will return the following:
 ```
 
 .. code:: python
-"""Example of using PandasAI on multiple Pandas DataFrame"""
+	"""Example of using PandasAI on multiple Pandas DataFrame"""
 
-import pandas as pd
-from pandasai import PandasAI
-from pandasai.llm.openai import OpenAI
+	import pandas as pd
+	from pandasai import PandasAI
+	from pandasai.llm.openai import OpenAI
 
-employees_data = {
-    'EmployeeID': [1, 2, 3, 4, 5],
-    'Name': ['John', 'Emma', 'Liam', 'Olivia', 'William'],
-    'Department': ['HR', 'Sales', 'IT', 'Marketing', 'Finance']
-}
+	employees_data = {
+	    'EmployeeID': [1, 2, 3, 4, 5],
+	    'Name': ['John', 'Emma', 'Liam', 'Olivia', 'William'],
+	    'Department': ['HR', 'Sales', 'IT', 'Marketing', 'Finance']
+	}
 
-salaries_data = {
-    'EmployeeID': [1, 2, 3, 4, 5],
-    'Salary': [5000, 6000, 4500, 7000, 5500]
-}
+	salaries_data = {
+	    'EmployeeID': [1, 2, 3, 4, 5],
+	    'Salary': [5000, 6000, 4500, 7000, 5500]
+	}
 
-employees_df = pd.DataFrame(employees_data)
-salaries_df = pd.DataFrame(salaries_data)
+	employees_df = pd.DataFrame(employees_data)
+	salaries_df = pd.DataFrame(salaries_data)
 
 
-llm = OpenAI()
-pandas_ai = PandasAI(llm, verbose=True)
-response = pandas_ai([employees_df, salaries_df], "Who gets paid the most?")
-print(response)
+	llm = OpenAI()
+	pandas_ai = PandasAI(llm, verbose=True)
+	response = pandas_ai([employees_df, salaries_df], "Who gets paid the most?")
+	print(response)
 
 
 ```
