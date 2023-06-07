@@ -12,7 +12,7 @@ The APP workflow is as seen below.
 
 .. image:: images/main_ui.png
 
-The users after sucessful login, are redirected to the API key input window to submit their respective openAI key. Next, the users can upload their flat csv file followed by their data analysis queries. The history of the prompts and responses can be stored in the text file, along with any response plots. Simply, one can ask questions about your data and get the answers back, in the form of human natural language response. 
+The users after sucessful login, are redirected to the API key input window to submit their respective openAI key. Next, the users can upload their flat csv file followed by their data analysis queries. The history of the prompts and responses can also be stored in the text file, along with provision to save the plots. Simply, one can ask questions about your data and get the answers back, in the form of human natural language response. 
 
 
 About `GUIPandasAI`
@@ -53,8 +53,7 @@ Step 2) Create the clone of the repository in your created virtual environment
 	
 Step 3) Launch APP
 
-- **The users can set their own credentials in the file `secrets.toml` found under the folder `.streamlit`. Alternatively, one can also use the existing example credentials as-it-is which are `user_test` and `user@123` or 
-`dev_test` and `dev@123`**
+- **The users can set their own credentials in the file `secrets.toml` found under the folder `.streamlit`. Alternatively, one can also use the existing example credentials as-it-is which are `user_test` and `user@123` or `dev_test` and `dev@123`**
 
 - **Windows users within the cloned folder just simply double-click the "run_app_windows.bat" file. Note:- Open the file with an Editor and replace with your virtual directory path within the file**
 
