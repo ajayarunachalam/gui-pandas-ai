@@ -1,4 +1,4 @@
-`GUIPandasAI`: An open-source, low-code python application with Generative AI capabilities using Streamlit for in-depth conversational data analysis along with key additional data functionalities using simple plain key-words
+`GUIPandasAI`: An open-source, low-code python application with Generative AI capabilities using Streamlit for in-depth conversational data analysis bundled with key additional data functionalities using simple plain key-words
 ===============================================================================================================================================================
 
 `gui-pandas-ai` is concieved, designed and developed by `Ajay Arunachalam` (ajay.arunachalam08@gmail) - https://www.linkedin.com/in/ajay-ph-d-4744581a/ 
