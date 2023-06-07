@@ -1,0 +1,1 @@
+C:\gui-pandas-ai-test\Scripts\activate.bat & streamlit run wrapper_streamlit.py --server.port 8505

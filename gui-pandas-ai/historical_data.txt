@@ -1,0 +1,3 @@
+According to the data, the top 5 happiest countries are the United States, Canada, Australia, United Kingdom, and Germany.
+Based on the data provided, the top 5 countries with the highest GDP and happiness index are the United States, China, Germany, United Kingdom, and France, in descending order.
+Can you create a histogram that displays the GDP of different countries, with each bar being a different color?

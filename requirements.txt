@@ -1,0 +1,20 @@
+# Library dependencies for the python code.  You need to install these with
+
+# py -3 -m venv <your_virtual_environment_name>
+    # or
+# conda create -n <env_name> python=3.6 (or 3.7)
+# source activate <env_name>
+# run requirements
+# python -m ipykernel install --user --name <env_name> --display-name "<Display Name>"
+
+# `pip install -U -r requirements.txt --ignore-installed` before you can run this.
+
+# libraries
+openai
+pandasai==0.2.2
+streamlit
+lux
+pandas-profiling
+seaborn
+lux-api
+datapane
