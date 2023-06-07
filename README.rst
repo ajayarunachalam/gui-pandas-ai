@@ -77,7 +77,7 @@ GUIPandasAI Code Snippet
 ========================
 Below is the example code snippet that runs the LLMs while viewing the uploaded data.
 
-```python
+.. code:: python
 
 if st.session_state.df is not None:
 	st.subheader("Peek into the uploaded dataframe:")
@@ -111,7 +111,7 @@ PandasAI - Overview
 
 For quick overview glimse through the below illustration: (All Credits & Copyrights Reserved to `Pandas AI`)
 
-```python
+.. code:: python
 import pandas as pd
 from pandasai import PandasAI
 
@@ -143,9 +143,9 @@ Name: country, dtype: object
 
 Of course, you can also ask PandasAI to perform more complex queries. For example, you can ask PandasAI to find the sum of the GDPs of the 2 unhappiest countries:
 
-```python
+.. code:: python
 pandas_ai(df, prompt='What is the sum of the GDPs of the 2 unhappiest countries?')
-```
+
 
 The above code will return the following:
 
@@ -153,7 +153,7 @@ The above code will return the following:
 19012600725504
 ```
 
-```python
+.. code:: python
 """Example of using PandasAI on multiple Pandas DataFrame"""
 
 import pandas as pd
@@ -179,7 +179,7 @@ llm = OpenAI()
 pandas_ai = PandasAI(llm, verbose=True)
 response = pandas_ai([employees_df, salaries_df], "Who gets paid the most?")
 print(response)
-```
+
 
 ```
 # Output: Olivia
