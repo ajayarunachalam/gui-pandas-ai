@@ -9,6 +9,7 @@ pypi: https://pypi.org/project/gui-pandas-ai
 
 
 The APP workflow is as seen below.
+
 .. image:: images/main_ui.png
 
 The users after sucessful login, are redirected to the API key input window to submit their respective openAI key. Next, the users can upload their flat csv file followed by their data analysis queries. The history of the prompts and responses can be stored in the text file, along with any response plots. Simply, one can ask questions about your data and get the answers back, in the form of human natural language response. 
