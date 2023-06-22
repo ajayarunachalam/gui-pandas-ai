@@ -209,6 +209,7 @@ TODO
 - [ ] Include more LLMs
 - [ ] Add support for Big Data
 - [ ] Support for the different file formats
+- [ ] Uploading Multiple flat files
 - [ ] Add Statistical data analysis
 - [ ] Add Adv. Data Analytics provision
 - [ ] Integrate Lux based visualizations
