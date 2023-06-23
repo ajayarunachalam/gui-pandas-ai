@@ -61,6 +61,8 @@ Step 3) Launch APP
 
 - **Mac users navigate within the cloned folder and type in "sh run_app_mac.sh" in the terminal**
 
+- **Alternatively, we can also launch the APP by running the wrapper_streamlit.py file simply using the command “streamlit run wrapper_streamlit.py”**
+
 The APP will launch with a URL as seen below.
 
 .. image:: images/run_app.png
