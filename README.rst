@@ -43,13 +43,12 @@ Step 2) Create the clone of the repository in your created virtual environment
 	pip install -r requirements.txt
 
 	**or**
-.. code:: bash
 	
 	git clone https://github.com/ajayarunachalam/gui-pandas-ai
 	cd gui-pandas-ai
  	sudo bash setup.sh
+
 	**or**
-.. code:: bash
 
 	git clone https://github.com/ajayarunachalam/gui-pandas-ai
  	cd gui-pandas-ai
