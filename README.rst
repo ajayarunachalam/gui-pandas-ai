@@ -46,7 +46,6 @@ Step 2) Create the clone of the repository in your created virtual environment
 	$ cd gui-pandas-ai
  	$ sudo bash setup.sh
 
-	      **or**
 	$ git clone https://github.com/ajayarunachalam/gui-pandas-ai
  	$ cd gui-pandas-ai
  	$ sudo bash setup.sh or python setup.py install
