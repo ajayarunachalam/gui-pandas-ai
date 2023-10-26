@@ -14,7 +14,7 @@ openai
 pandasai==0.2.2
 streamlit
 lux
-pandas-profiling
+ydata-profiling
 seaborn
 lux-api
 datapane
